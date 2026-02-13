@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'NameClaim - Username Registry',
-  description: 'Claim unique usernames on Base and Stacks',
+  title: 'NameClaim',
+  description: 'Decentralized name registration',
 }
 
 export default function RootLayout({
