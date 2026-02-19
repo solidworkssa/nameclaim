@@ -2,8 +2,11 @@
 pragma solidity ^0.8.20;
 
 /// @title NameClaim Contract
+/// @author solidworkssa
 /// @notice Decentralized name registration and resolution.
 contract NameClaim {
+    string public constant VERSION = "1.0.0";
+
 
     struct NameRecord {
         address owner;
