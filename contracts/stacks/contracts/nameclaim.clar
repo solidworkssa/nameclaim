@@ -33,9 +33,9 @@
             (record (map-get? names name))
         )
         (asserts! (or (is-none record) (< (get expiration (unwrap! record (err u500))) block-height)) (err u100))
-        (try! (stx-transfer? registration-fee tx-sender (as-contract tx-sender)))
+        (try! (stx-transfer? registration-fee contract-caller (as-contract contract-caller)))
         (map-set names name {
-            owner: tx-sender,
+            owner: contract-caller,
             data: u"",
             expiration: (+ block-height duration)
         })
